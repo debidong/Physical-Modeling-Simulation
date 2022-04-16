@@ -11,5 +11,5 @@ The simulation of the bounce is added, which makes the simulation much more real
 Physical parameters are set by default, but also can be changed.  
 
 
-#Reference:  
+## Reference:  
 https://artowen.su.domains/courses/306a/threesidedcoin_amstat.pdf  
