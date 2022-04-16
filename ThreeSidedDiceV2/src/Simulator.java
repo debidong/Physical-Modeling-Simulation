@@ -55,7 +55,7 @@ public class Simulator {
 
             angle = random.nextDouble(2 * PI);
             currentHei = fallingHei;
-            fallingTime = Math.sqrt(4 * halfHeight / g);
+            fallingTime = Math.sqrt(2 * currentHei / g);
             aV = 0;
             vV = Math.sqrt( 2 * currentHei * g );
             angle += aV * fallingTime;
