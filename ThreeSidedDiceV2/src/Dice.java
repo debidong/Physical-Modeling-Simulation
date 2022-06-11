@@ -17,12 +17,14 @@ public class Dice {
     public static Dice getDice() {
         Dice dice = new Dice();
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Please input the mass of the dice(g): ");
-        dice.mass = scanner.nextDouble() / 1000;
+//        System.out.print("Please input the mass of the dice(g): ");
+//        dice.mass = scanner.nextDouble() / 1000;
+        dice.mass = 0.01;
         System.out.print("Please input the radius of the dice(cm): ");
         dice.radius = scanner.nextDouble() / 100;
         System.out.print("Please input the height of the dice(cm): ");
         dice.height = scanner.nextDouble() / 100;
+
         return dice;
 
     }

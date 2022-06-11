@@ -7,7 +7,7 @@ public class Simulator {
 
 
     public Simulator( int simTime ) {
-        this.fallingHei = 1.0; // this parameter is set to 1.0m by default, also can be changed
+        this.fallingHei = 2.0; // this parameter is set to 1.0m by default, also can be changed
                                // falling height should be set higher than both the 2*radius and 2*halfHeight
                                // to make the dice reflect at least once after each drop
         this.simTime = simTime;
@@ -39,7 +39,7 @@ public class Simulator {
         double K = mass * (k + 1) / J;
 
         double angle;
-        double verAngle = Math.atan(radius / halfHeight);
+        double verAngle = Math.atan(halfHeight / radius);
 
         double currentHei;
         double fallingTime;
@@ -145,8 +145,9 @@ public class Simulator {
 
     }
 
-    public void getResult() {
+    public void getResult( Dice dice ) {
         System.out.println("----------------------------------------------------------------");
+        System.out.println("R / h =" + dice.getRadius() / dice.getHeight() );
         System.out.println( "The number of times on three sides is respective: ");
         System.out.println( "Face1: " + face1 + " | Face2: " + face2 + " | Edge: " + edge);
         int sum = face1 + face2 + edge;
